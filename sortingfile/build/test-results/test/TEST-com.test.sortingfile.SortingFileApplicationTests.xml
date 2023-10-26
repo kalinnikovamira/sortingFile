@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.test.sortingfile.SortingFileApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-26T14:33:31" hostname="DESKTOP-62ATQ9O" time="0.632">
+  <properties/>
+  <testcase name="testSortDictionary()" classname="com.test.sortingfile.SortingFileApplicationTests" time="0.632"/>
+  <system-out><![CDATA[17:33:30.350 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.test.sortingfile.SortingFileApplicationTests]: SortingFileApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:33:30.433 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.test.sortingfile.SortingFileApplication for test class com.test.sortingfile.SortingFileApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2023-10-26T17:33:30.742+03:00  INFO 7400 --- [    Test worker] c.t.s.SortingFileApplicationTests        : Starting SortingFileApplicationTests using Java 17.0.7 with PID 7400 (started by lizav in C:\Users\lizav\IdeaProjects\sortingfile)
+2023-10-26T17:33:30.743+03:00  INFO 7400 --- [    Test worker] c.t.s.SortingFileApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-10-26T17:33:31.650+03:00  INFO 7400 --- [    Test worker] c.t.s.SortingFileApplicationTests        : Started SortingFileApplicationTests in 1.095 seconds (process running for 1.98)
+2023-10-26T17:33:32.292+03:00  INFO 7400 --- [    Test worker] c.t.s.service.DictionaryService          : the file was sorted
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

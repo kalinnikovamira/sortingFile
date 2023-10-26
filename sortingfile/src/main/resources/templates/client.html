@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Sorting Dictionary </title>
+</head>
+<body>
+<h1>Загрузите файл для сортировки</h1>
+<input type="file" id="fileInput" accept=".txt">
+<label for="chunkSizeInput">Максимальное количество строк для одного фрагмента:</label>
+<input type="number" id="chunkSizeInput" name="chunkSize" value="100000">
+<button onclick="uploadFile()">Upload and sort</button>
+<p id="status"></p>
+
+<a id="downloadLink" style="display: none" download="sorted_dictionary.txt">Download the sorted file</a>
+
+<script>
+    function uploadFile() {
+        const fileInput = document.getElementById('fileInput');
+        const chunkSizeInput = document.getElementById('chunkSizeInput');
+        const status = document.getElementById('status');
+        const downloadLink = document.getElementById('downloadLink');
+
+        const file = fileInput.files[0];
+        if (!file) {
+            status.textContent = 'Please select a file to download.';
+            return;
+        }
+
+        const chunkSize = parseInt(chunkSizeInput.value, 10);
+
+        const formData = new FormData();
+        formData.append('inputFile', file);
+        formData.append('chunkSize', chunkSize);
+
+        fetch('/sortDictionary', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (response.ok) {
+                    status.textContent = 'The file has been successfully sorted.';
+                    downloadLink.style.display = 'block';
+                    downloadLink.href = '/download';
+                } else {
+                    status.textContent = 'There was an error while sorting a file.';
+                }
+            })
+            .catch(error => {
+                status.textContent = 'There was an error: ' + error;
+            });
+    }
+</script>
+</body>
+</html>
